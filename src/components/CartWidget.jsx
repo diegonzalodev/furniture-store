@@ -1,9 +1,11 @@
+import iconCart from "../img/cart.png";
+
 function CartWidget() {
   return (
     <div className="flex items-center gap-1">
       <img
         className="cursor-pointer"
-        src="https://cdn-icons-png.flaticon.com/512/107/107831.png"
+        src={iconCart}
         width={42}
         alt="Icono Carrito Ecommerce"
       />

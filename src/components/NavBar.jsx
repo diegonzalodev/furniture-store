@@ -1,15 +1,18 @@
+import logo from "../img/logo.png";
+
 function NavBar({ children }) {
   return (
-    <div className="flex justify-between items-center">
+    <div className="max-w-7xl mx-auto flex justify-between items-center">
       <div>
         <a href="#">
           <img
-            src="https://storage.googleapis.com/signmonkey-148101.appspot.com/2020/files/signs/sign.311090.v3.png"
+            src={logo}
             width={180}
-            alt="Furniture Store Logo"
+            alt="Logo Furniture Store"
           />
         </a>
       </div>
+
       <nav>
         <ul className="flex gap-7">
           <li className="hover:font-bold">

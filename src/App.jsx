@@ -1,5 +1,3 @@
-import { Children, useState } from "react";
-import "./App.css";
 import NavBar from "./components/NavBar";
 import CartWidget from "./components/CartWidget";
 import ItemListContainer from "./components/ItemListContainer";
@@ -7,9 +5,11 @@ import ItemListContainer from "./components/ItemListContainer";
 function App() {
   return (
     <>
-      <NavBar>
-        <CartWidget />
-      </NavBar>
+      <div className="bg-slate-400">
+        <NavBar>
+          <CartWidget />
+        </NavBar>
+      </div>
       <ItemListContainer greeting={"Rodrigo"} />
     </>
   );
