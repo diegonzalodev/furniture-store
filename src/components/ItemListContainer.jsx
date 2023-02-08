@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { getFetch } from "../utilities/getFetch";
+import { getFetch } from "../utils/getFetch";
 import ItemList from "./ItemList";
 import "../css/loading.css";
 
@@ -9,6 +9,10 @@ function ItemListContainer() {
   const [loading, setLoading] = useState(true);
 
   const { categoryId } = useParams();
+
+  function Loading() {
+    return <div className="loading"></div>;
+  }
 
   useEffect(() => {
     if (categoryId) {
@@ -29,7 +33,7 @@ function ItemListContainer() {
   }, [categoryId]);
 
   return (
-    <ItemList products={products} loading={loading} />
+    <ItemList products={products} loading={loading} Loading={Loading} />
   );
 }
 

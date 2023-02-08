@@ -3,6 +3,7 @@ import NavBar from "./components/NavBar";
 import CartWidget from "./components/CartWidget";
 import ItemListContainer from "./components/ItemListContainer";
 import ItemDetailContainer from "./components/ItemDetailContainer";
+import HeroSection from "./components/HeroSection";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
           <CartWidget />
         </NavBar>
       </div>
+      <HeroSection />
       <Routes>
         <Route path="/" element={<ItemListContainer />} />
         <Route path="/category/:categoryId" element={<ItemListContainer />} />

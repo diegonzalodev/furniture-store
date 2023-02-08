@@ -10,6 +10,10 @@ function ItemDetailContainer() {
 
   const { itemId } = useParams();
 
+  function Loading() {
+    return <div className="loading"></div>;
+  }
+
   useEffect(() => {
     getFetch()
       .then((response) =>
@@ -26,7 +30,7 @@ function ItemDetailContainer() {
   return (
     <div>
       {loading ? (
-        <div className="loading"></div>
+        <Loading />
       ) : (
         <>
           <ItemDetail info={objectDetail} />
