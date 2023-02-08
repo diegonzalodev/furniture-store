@@ -1,6 +1,10 @@
 import ItemCount from "./ItemCount";
 
 function ItemDetail({ info }) {
+  const handleAdd = (initialValue) => {
+    return initialValue;
+  };
+
   return (
     <div className="max-w-7xl mx-auto mt-10 text-xl flex justify-center gap-5">
       <div>
@@ -13,7 +17,8 @@ function ItemDetail({ info }) {
           </div>
           <div>
             <p className="font-bold">
-              Description: <span className="font-normal">{info.description}</span>
+              Description:{" "}
+              <span className="font-normal">{info.description}</span>
             </p>
           </div>
           <div className="my-5">
@@ -27,7 +32,7 @@ function ItemDetail({ info }) {
             </p>
           </div>
         </div>
-        <ItemCount />
+        <ItemCount handleAdd={handleAdd} initial={1} stock={info.stock} />
       </div>
     </div>
   );
