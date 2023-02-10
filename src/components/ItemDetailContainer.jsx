@@ -1,11 +1,10 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { getFetch } from "../utilities/getFetch";
+import { getFetchOne } from "../utils/getFetch";
 import ItemDetail from "./ItemDetail";
 
 function ItemDetailContainer() {
-  const [arrayDetail, setArrayDetail] = useState([]);
-  const [objectDetail, setObjectDetail] = useState({});
+  const [product, setProduct] = useState({});
   const [loading, setLoading] = useState(true);
 
   const { itemId } = useParams();
@@ -15,17 +14,11 @@ function ItemDetailContainer() {
   }
 
   useEffect(() => {
-    getFetch()
-      .then((response) =>
-        setArrayDetail(response.filter((product) => product.id === itemId))
-      )
-      .catch((error) => console.log(error))
-      .finally(() => setLoading(false));
-  }, [itemId]);
-
-  useEffect(() => {
-    arrayDetail.forEach((info) => setObjectDetail(info));
-  }, [arrayDetail]);
+    getFetchOne(itemId)
+      .then((response) => setProduct(response))
+      .catch((error) => setProduct(error))
+      .finally(() => setLoading(false))
+  }, []);
 
   return (
     <div>
@@ -33,7 +26,7 @@ function ItemDetailContainer() {
         <Loading />
       ) : (
         <>
-          <ItemDetail info={objectDetail} />
+          <ItemDetail info={product} />
         </>
       )}
     </div>

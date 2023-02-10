@@ -1,12 +1,12 @@
 import { Link, NavLink } from "react-router-dom";
-import logo from "../img/logo.png";
+import logo from "../images/logo.png";
 
 function NavBar({ children }) {
   return (
     <div className="max-w-7xl mx-auto flex justify-between items-center">
       <div>
         <Link to="/">
-          <img src={logo} width={180} alt="Logo Furniture Store" />
+          <img src={logo} width={180} alt="Furniture Store Logo" />
         </Link>
       </div>
       <nav>

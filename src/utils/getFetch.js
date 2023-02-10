@@ -177,13 +177,18 @@ let products = [
   },
 ];
 
-export const getFetch = () => {
+export const getFetch = (id) => {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
-      if (true) {
-        return resolve(products);
-      }
-      return reject("Rejected");
+      resolve(id ? products.find((product) => product.id === id) : products);
+    }, 2000);
+  });
+};
+
+export const getFetchOne = (id) => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve(products.find((product) => product.id === id));
     }, 2000);
   });
 };

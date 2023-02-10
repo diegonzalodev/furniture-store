@@ -1,8 +1,11 @@
+import { useCartContext } from "../context/CartContext";
 import ItemCount from "./ItemCount";
 
 function ItemDetail({ info }) {
-  const handleAdd = (initialValue) => {
-    return initialValue;
+  const { addProduct } = useCartContext();
+
+  const onAdd = (amount) => {
+    addProduct({ ...info, amount });
   };
 
   return (
@@ -32,7 +35,7 @@ function ItemDetail({ info }) {
             </p>
           </div>
         </div>
-        <ItemCount handleAdd={handleAdd} initial={1} stock={info.stock} />
+        <ItemCount onAdd={onAdd} initial={1} stock={info.stock} />
       </div>
     </div>
   );
