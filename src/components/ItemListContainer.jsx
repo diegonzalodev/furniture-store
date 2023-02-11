@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { getFetch, getFetchOne } from "../utils/getFetch";
+import { getFetch } from "../utils/getFetch";
 import ItemList from "./ItemList";
 import "../css/loading.css";
 
-function ItemListContainer() {
+function ItemListContainer({ children }) {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -33,7 +33,10 @@ function ItemListContainer() {
   }, [categoryId]);
 
   return (
-    <ItemList products={products} loading={loading} Loading={Loading} />
+    <>
+      {children}
+      <ItemList products={products} loading={loading} Loading={Loading} />
+    </>
   );
 }
 

@@ -16,9 +16,15 @@ function App() {
             <CartWidget />
           </NavBar>
         </div>
-        <HeroSection />
         <Routes>
-          <Route path="/" element={<ItemListContainer />} />
+          <Route
+            path="/"
+            element={
+              <ItemListContainer>
+                <HeroSection />
+              </ItemListContainer>
+            }
+          />
           <Route path="/category/:categoryId" element={<ItemListContainer />} />
           <Route path="/item/:itemId" element={<ItemDetailContainer />} />
           <Route path="/cart" element={<CartContainer />} />
