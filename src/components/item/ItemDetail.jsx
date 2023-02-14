@@ -1,14 +1,14 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { useCartContext } from "../context/CartContext";
+import { useCartContext } from "../../context/CartContext";
 import ItemCount from "./ItemCount";
 
 function ItemDetail({ info }) {
   const [isCount, setIsCount] = useState(true);
   const { addProduct } = useCartContext();
 
-  const onAdd = (amount) => {
-    addProduct({ ...info, amount });
+  const onAdd = (quantity) => {
+    addProduct({ ...info }, quantity);
     setIsCount(false);
   };
 
@@ -41,7 +41,7 @@ function ItemDetail({ info }) {
         </div>
         <div>
           {isCount ? (
-            <ItemCount onAdd={onAdd} initial={1} stock={info.stock} />
+            <ItemCount initial={1} stock={info.stock} onAdd={onAdd} />
           ) : (
             <div className="flex flex-col gap-5">
               <Link to="/cart">

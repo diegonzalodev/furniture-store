@@ -1,21 +1,24 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { CartContextProvider } from "./context/CartContext";
-import NavBar from "./components/NavBar";
-import CartWidget from "./components/CartWidget";
-import ItemListContainer from "./components/ItemListContainer";
-import ItemDetailContainer from "./components/ItemDetailContainer";
-import HeroSection from "./components/HeroSection";
-import CartContainer from "./components/CartContainer";
+import Header from "./components/layout/Header";
+import NavBar from "./components/layout/NavBar";
+import CartWidget from "./components/cart/CartWidget";
+import HeroSection from "./components/layout/HeroSection";
+import ItemListContainer from "./components/item/ItemListContainer";
+import ItemDetailContainer from "./components/item/ItemDetailContainer";
+import CartContainer from "./components/cart/CartContainer";
+import CartCheckout from "./components/cart/CartCheckout";
+import Footer from "./components/layout/Footer";
 
 function App() {
   return (
     <BrowserRouter>
       <CartContextProvider>
-        <div className="bg-slate-400">
+        <Header>
           <NavBar>
             <CartWidget />
           </NavBar>
-        </div>
+        </Header>
         <Routes>
           <Route
             path="/"
@@ -28,8 +31,10 @@ function App() {
           <Route path="/category/:categoryId" element={<ItemListContainer />} />
           <Route path="/item/:itemId" element={<ItemDetailContainer />} />
           <Route path="/cart" element={<CartContainer />} />
+          <Route path="/cart/checkout" element={<CartCheckout />} />
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
+        <Footer />
       </CartContextProvider>
     </BrowserRouter>
   );

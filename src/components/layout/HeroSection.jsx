@@ -1,4 +1,4 @@
-import hero from "../images/hero.png";
+import hero from "../../assets/images/hero.png";
 
 function HeroSection() {
   return (
@@ -9,7 +9,7 @@ function HeroSection() {
             Find the best furniture collections and accesories for every room
           </h1>
           <p className="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 text-xl md:text-2xl lg:text-3xl dark:text-gray-400">
-            Pieces that provide a somple canvas for new accents
+            Pieces that provide a simple canvas for new accents
           </p>
         </div>
         <div className="hidden lg:mt-0 lg:col-span-5 lg:flex">

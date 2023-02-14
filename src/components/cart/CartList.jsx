@@ -1,4 +1,4 @@
-import { useCartContext } from "../context/CartContext";
+import { useCartContext } from "../../context/CartContext";
 import CartItem from "./CartItem";
 
 function CartList() {
@@ -8,7 +8,10 @@ function CartList() {
     <div className="col-span-2">
       <div>
         {cartList.map((product) => (
-          <CartItem key={product.id} product={product} />
+          <div key={product.id}>
+            <CartItem product={product} />
+            <hr className="h-0.5 bg-slate-200 mb-7" />
+          </div>
         ))}
       </div>
     </div>

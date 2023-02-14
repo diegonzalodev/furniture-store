@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { getFetchOne } from "../utils/getFetch";
+import { getFetchOne } from "../../utilities/getFetch";
 import ItemDetail from "./ItemDetail";
+import Loading from "../loading/Loading";
 
 function ItemDetailContainer() {
   const [product, setProduct] = useState({});
@@ -9,15 +10,11 @@ function ItemDetailContainer() {
 
   const { itemId } = useParams();
 
-  function Loading() {
-    return <div className="loading"></div>;
-  }
-
   useEffect(() => {
     getFetchOne(itemId)
       .then((response) => setProduct(response))
       .catch((error) => setProduct(error))
-      .finally(() => setLoading(false))
+      .finally(() => setLoading(false));
   }, []);
 
   return (
