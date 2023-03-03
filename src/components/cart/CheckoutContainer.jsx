@@ -12,12 +12,13 @@ function CheckoutContainer() {
     phone: "",
     email: "",
     reemail: "",
+    password: "",
   });
 
   const [error, setError] = useState({});
 
   const [isUserValidated, setIsUserValidated] = useState(false);
-  const [isFormValidated, setIfFormValidated] = useState(false);
+  const [isFormValidated, setIsFormValidated] = useState(false);
 
   const handleInputChanged = ({ target }) => {
     const { name, value } = target;
@@ -31,9 +32,9 @@ function CheckoutContainer() {
   const validateForm = (form) => {
     let errors = {};
     let regexNames = /^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$/;
-    let regexPhone =
-      /[\(]?[\+]?(\d{2}|\d{3})[\)]?[\s]?((\d{6}|\d{8})|(\d{3}[\*\.\-\s]){3}|(\d{2}[\*\.\-\s]){4}|(\d{4}[\*\.\-\s]){2})|\d{8}|\d{10}|\d{12}/;
+    let regexPhone = /[\(]?[\+]?(\d{2}|\d{3})[\)]?[\s]?((\d{6}|\d{8})|(\d{3}[\*\.\-\s]){3}|(\d{2}[\*\.\-\s]){4}|(\d{4}[\*\.\-\s]){2})|\d{8}|\d{10}|\d{12}/;
     let regexEmail = /^(\w+[/./-]?){1,}@[a-z]+[/.]\w{2,}$/;
+    let regexPassword = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])([A-Za-z\d$@$!%*?&]|[^ ]){8,15}$/;
 
     if (!form.names.trim()) {
       errors.names = "The field 'Names' is required";
@@ -67,8 +68,17 @@ function CheckoutContainer() {
       delete errors.reemail;
     }
 
+    if (!form.password.trim()) {
+      errors.password = "The field 'Password' is required";
+    } else if (!regexPassword.test(form.password.trim())) {
+      errors.password =
+        "Your password must have a minimum of 8 characters, a capital letter, a number and a special character";
+    } else {
+      delete errors.password;
+    }
+
     if (Object.entries(errors).length === 0) {
-      setIfFormValidated(true);
+      setIsFormValidated(true);
     }
 
     return errors;
@@ -100,17 +110,23 @@ function CheckoutContainer() {
       .finally(() => {
         setIsUserValidated(true),
           emptyCart(),
-          setFormState({ names: "", phone: "", email: "", reemail: "" });
+          setFormState({
+            names: "",
+            phone: "",
+            email: "",
+            reemail: "",
+            password: "",
+          });
       });
   };
 
   return (
-    <div className="max-w-7xl mx-auto my-5">
+    <div className="w-11/12 mx-auto my-5 md:max-w-7xl">
       {isUserValidated ? (
         <CheckoutSuccessful />
       ) : (
         <>
-          <h2 className="text-center text-3xl font-bold">
+          <h2 className="text-center text-2xl font-bold md:text-3xl">
             First, you should register!
           </h2>
           <CheckoutForm

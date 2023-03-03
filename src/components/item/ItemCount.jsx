@@ -20,7 +20,7 @@ function ItemCount({ onAdd, initial, stock }) {
   };
 
   return (
-    <div className="w-1/2 flex flex-col gap-5">
+    <div className="mt-7 w-full flex flex-col gap-5 md:w-1/2">
       <div className="flex justify-between items-center bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded text-lg">
         <button onClick={handleAddProduct}>+</button>
         <div>{counter}</div>

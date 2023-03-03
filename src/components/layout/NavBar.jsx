@@ -10,14 +10,14 @@ const categories = [
 
 function NavBar({ children }) {
   return (
-    <div className="max-w-7xl mx-auto flex justify-between items-center">
+    <nav className="w-11/12 mx-auto flex flex-col justify-between items-center gap-7 md:max-w-7xl md:flex-row md:gap-0">
       <div>
         <Link to="/">
           <img src={logo} width={145} alt="Furniture Store Logo" />
         </Link>
       </div>
       <nav>
-        <ul className="flex content-center items-center gap-7">
+        <ul className="flex content-center items-center gap-7 text-center">
           {categories.map((cat) => (
             <NavLink
               key={cat.id}
@@ -32,7 +32,7 @@ function NavBar({ children }) {
         </ul>
       </nav>
       {children}
-    </div>
+    </nav>
   );
 }
 

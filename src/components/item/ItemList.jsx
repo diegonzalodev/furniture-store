@@ -3,7 +3,7 @@ import Loading from "../loading/Loading";
 
 function ItemList({ products, loading }) {
   return (
-    <div className="max-w-7xl mx-auto my-8 flex flex-wrap justify-between items-center gap-x-5 gap-y-10">
+    <div className="w-11/12 mx-auto my-8 flex flex-wrap justify-between items-center gap-x-5 gap-y-10 md:max-w-7xl">
       {loading ? (
         <Loading />
       ) : (

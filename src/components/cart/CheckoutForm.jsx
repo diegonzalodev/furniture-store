@@ -7,7 +7,7 @@ function CheckoutForm({
   handleInputChanged,
   error,
 }) {
-  const { names, phone, email, reemail } = formState;
+  const { names, phone, email, reemail, password } = formState;
 
   return (
     <form
@@ -41,7 +41,7 @@ function CheckoutForm({
           name="phone"
           value={phone}
           type="tel"
-          placeholder="Ex: +1 (637) 766-3602"
+          placeholder="Ex: 9534820192"
           handleInputBlur={handleInputBlur}
           handleInputChanged={handleInputChanged}
         >
@@ -92,10 +92,29 @@ function CheckoutForm({
             </div>
           )}
         </Input>
+        <Input
+          labelInput="Password:"
+          id="password"
+          name="password"
+          value={password}
+          type="password"
+          placeholder="********"
+          handleInputBlur={handleInputBlur}
+          handleInputChanged={handleInputChanged}
+        >
+          {error.password && (
+            <div
+              className="bg-orange-100 border-l-4 border-orange-500 text-orange-700 mt-2 p-2"
+              role="alert"
+            >
+              <p>{error.password}</p>
+            </div>
+          )}
+        </Input>
       </div>
       <div className="mt-3 flex items-center">
         <input
-          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+          className="w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline md:w-1/2 md:mx-auto"
           type="submit"
           value="Register"
         />

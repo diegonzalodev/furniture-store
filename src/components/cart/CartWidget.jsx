@@ -6,7 +6,7 @@ function CartWidget() {
   const { totalProducts } = useCartContext();
 
   return (
-    <div className="flex items-center gap-1">
+    <div className="mb-5 flex items-center gap-1 md:mb-0">
       <Link to="/cart">
         <img
           className="cursor-pointer"

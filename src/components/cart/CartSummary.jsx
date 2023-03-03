@@ -4,7 +4,7 @@ import { useCartContext } from "../../context/CartContext";
 function CartSummary() {
   const { totalProducts, totalPrice } = useCartContext();
   return (
-    <div className="w-5/6 bg-zinc-100 px-7 pt-5 rounded-lg col-span-1 justify-self-end">
+    <div className="w-full bg-zinc-100 px-7 pt-5 rounded-lg col-span-1 justify-self-end md:w-5/6">
       <h2 className="font-medium text-center text-2xl">Order summary</h2>
       <div className="my-6 text-lg flex justify-between">
         <p>Total Products</p>
