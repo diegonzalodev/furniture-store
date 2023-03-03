@@ -6,10 +6,12 @@
 
 ![Furniture Store Home](/src/assets/screenshots/home.png)
 ![Furniture Store Products](/src/assets/screenshots/category-products.png)
-![Furniture Store Details](/src/assets/screenshots/product-detail.png)
+![Furniture Store Details](/src/assets/screenshots/product-details.png)
 ![Furniture Store Cart](/src/assets/screenshots/cart.png)
 ![Furniture Store Empty Cart](/src/assets/screenshots/empty-cart.png)
 ![Furniture Store Checkout](/src/assets/screenshots/checkout.png)
+![Furniture Store Checkout](/src/assets/screenshots/checkout-validations.png)
+![Furniture Store Checkout](/src/assets/screenshots/checkout-successful.png)
 
 ## Dependencies:
 
