@@ -7,8 +7,7 @@ import HeroSection from "./components/layout/HeroSection";
 import ItemListContainer from "./components/item/ItemListContainer";
 import ItemDetailContainer from "./components/item/ItemDetailContainer";
 import CartContainer from "./components/cart/CartContainer";
-import CartCheckout from "./components/cart/CartCheckout";
-import Footer from "./components/layout/Footer";
+import CheckoutContainer from "./components/cart/CheckoutContainer";
 
 function App() {
   return (
@@ -20,9 +19,7 @@ function App() {
           </NavBar>
         </Header>
         <Routes>
-          <Route
-            path="/"
-            element={
+          <Route path="/" element={
               <ItemListContainer>
                 <HeroSection />
               </ItemListContainer>
@@ -31,10 +28,9 @@ function App() {
           <Route path="/category/:categoryId" element={<ItemListContainer />} />
           <Route path="/item/:itemId" element={<ItemDetailContainer />} />
           <Route path="/cart" element={<CartContainer />} />
-          <Route path="/cart/checkout" element={<CartCheckout />} />
+          <Route path="/cart/checkout" element={<CheckoutContainer />} />
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
-        <Footer />
       </CartContextProvider>
     </BrowserRouter>
   );
