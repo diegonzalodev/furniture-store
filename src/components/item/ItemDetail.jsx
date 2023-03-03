@@ -43,7 +43,7 @@ function ItemDetail({ info }) {
           {isCount ? (
             <ItemCount initial={1} stock={info.stock} onAdd={onAdd} />
           ) : (
-            <div className="mt-7 flex flex-col gap-5">
+            <div className="my-7 flex flex-col gap-5 md:mt-7 md:mb-0">
               <Link to="/cart">
                 <button className="w-full bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded text-lg md:w-1/2">
                   Go to Cart

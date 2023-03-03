@@ -2,16 +2,33 @@
 
 ## Furniture Store
 
-![Furniture Store Home](/src/assets/screenshots/home.png)
-![Furniture Store Products](/src/assets/screenshots/category-products.png)
-![Furniture Store Details](/src/assets/screenshots/product-details.png)
-![Furniture Store Cart](/src/assets/screenshots/cart.png)
-![Furniture Store Empty Cart](/src/assets/screenshots/empty-cart.png)
-![Furniture Store Checkout](/src/assets/screenshots/checkout.png)
-![Furniture Store Checkout Validations](/src/assets/screenshots/checkout-validations.png)
-![Furniture Store Checkout Successful](/src/assets/screenshots/checkout-successful.png)
+### Description
 
-## Dependencies:
+Furniture Store is a single page application designed to enable customers to browse, select and purchase furniture products. The application is built using the React JavaScript library, which allows for efficient rendering and handling of complex user interfaces.
+
+### Desktop Views
+
+![Furniture Store Home](/src/assets/screenshots/desktop/home.png)
+![Furniture Store Products](/src/assets/screenshots/desktop/category-products.png)
+![Furniture Store Details](/src/assets/screenshots/desktop/product-details.png)
+![Furniture Store Cart](/src/assets/screenshots/desktop/cart.png)
+![Furniture Store Empty Cart](/src/assets/screenshots/desktop/empty-cart.png)
+![Furniture Store Checkout](/src/assets/screenshots/desktop/checkout.png)
+![Furniture Store Checkout Validations](/src/assets/screenshots/desktop/checkout-validations.png)
+![Furniture Store Checkout Successful](/src/assets/screenshots/desktop/checkout-successful.png)
+
+### Mobile Views
+
+![Furniture Store Home](/src/assets/screenshots/mobile/home.png)
+![Furniture Store Products](/src/assets/screenshots/mobile/category-products.png)
+![Furniture Store Details](/src/assets/screenshots/mobile/product-details.png)
+![Furniture Store Cart](/src/assets/screenshots/mobile/cart.png)
+![Furniture Store Empty Cart](/src/assets/screenshots/mobile/empty-cart.png)
+![Furniture Store Checkout](/src/assets/screenshots/mobile/checkout.png)
+![Furniture Store Checkout Validations](/src/assets/screenshots/mobile/checkout-validations.png)
+![Furniture Store Checkout Successful](/src/assets/screenshots/mobile/checkout-successful.png)
+
+### Dependencies:
 
 - **firebase**: Firebase provides the tools and infrastructure you need to develop, grow, and earn money from your app.
 - **react**: The react package contains only the functionality necessary to define React components.
@@ -22,7 +39,7 @@
 - **tailwindcss**: A utility-first CSS framework for rapidly building custom user interfaces.
 - **vite**: Vite is a new breed of frontend build tool that significantly improves the frontend development experience.
 
-## Versions:
+#### Versions:
 
 | Dependency       | Version |
 | ---------------- | ------- |
@@ -35,4 +52,4 @@
 | tailwindcss      | 3.2.4   |
 | vite             | 4.0.0   |
 
-## Demo: [Furniture Store](https://furniture-store-dg.netlify.app/)
+### Demo: [Furniture Store](https://furniture-store-dg.netlify.app/)
