@@ -1,7 +1,5 @@
 # React Final Presentation - CoderHouse💻
 
----
-
 ## Furniture Store
 
 ![Furniture Store Home](/src/assets/screenshots/home.png)
