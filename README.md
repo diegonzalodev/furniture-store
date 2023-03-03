@@ -10,8 +10,8 @@
 ![Furniture Store Cart](/src/assets/screenshots/cart.png)
 ![Furniture Store Empty Cart](/src/assets/screenshots/empty-cart.png)
 ![Furniture Store Checkout](/src/assets/screenshots/checkout.png)
-![Furniture Store Checkout](/src/assets/screenshots/checkout-validations.png)
-![Furniture Store Checkout](/src/assets/screenshots/checkout-successful.png)
+![Furniture Store Checkout Validations](/src/assets/screenshots/checkout-validations.png)
+![Furniture Store Checkout Successful](/src/assets/screenshots/checkout-successful.png)
 
 ## Dependencies:
 
