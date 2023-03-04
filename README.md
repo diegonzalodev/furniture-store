@@ -6,27 +6,29 @@
 
 Furniture Store is a single page application designed to enable customers to browse, select and purchase furniture products. The application is built using the React JavaScript library, which allows for efficient rendering and handling of complex user interfaces.
 
-### Desktop Views
+### Functionalities
 
-![Furniture Store Home](/src/assets/screenshots/desktop/home.png)
-![Furniture Store Products](/src/assets/screenshots/desktop/category-products.png)
-![Furniture Store Details](/src/assets/screenshots/desktop/product-details.png)
-![Furniture Store Cart](/src/assets/screenshots/desktop/cart.png)
-![Furniture Store Empty Cart](/src/assets/screenshots/desktop/empty-cart.png)
-![Furniture Store Checkout](/src/assets/screenshots/desktop/checkout.png)
-![Furniture Store Checkout Validations](/src/assets/screenshots/desktop/checkout-validations.png)
-![Furniture Store Checkout Successful](/src/assets/screenshots/desktop/checkout-successful.png)
+- Show the available products for the selected category
+- Show the details of the products in each category.
+- Add or decrease the number of products based on available stock.
+- Empty or remove items from the cart.
+- Validate the form to confirm the purchase.
+- Store card data in LocalStorage.
+- Store form and purchase data in Firebase.
+- Show the ID of the purchase order made by the user.
 
-### Mobile Views
+### Views
 
-![Furniture Store Home](/src/assets/screenshots/mobile/home.png)
-![Furniture Store Products](/src/assets/screenshots/mobile/category-products.png)
-![Furniture Store Details](/src/assets/screenshots/mobile/product-details.png)
-![Furniture Store Cart](/src/assets/screenshots/mobile/cart.png)
-![Furniture Store Empty Cart](/src/assets/screenshots/mobile/empty-cart.png)
-![Furniture Store Checkout](/src/assets/screenshots/mobile/checkout.png)
-![Furniture Store Checkout Validations](/src/assets/screenshots/mobile/checkout-validations.png)
-![Furniture Store Checkout Successful](/src/assets/screenshots/mobile/checkout-successful.png)
+| Desktop                                                                                           | Mobile                                                                                           |
+| ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
+| ![Furniture Store Home](/src/assets/screenshots/desktop/home.png)                                 | ![Furniture Store Home](/src/assets/screenshots/mobile/home.png)                                 |
+| ![Furniture Store Products](/src/assets/screenshots/desktop/category-products.png)                | ![Furniture Store Products](/src/assets/screenshots/mobile/category-products.png)                |
+| ![Furniture Store Details](/src/assets/screenshots/desktop/product-details.png)                   | ![Furniture Store Details](/src/assets/screenshots/mobile/product-details.png)                   |
+| ![Furniture Store Cart](/src/assets/screenshots/desktop/cart.png)                                 | ![Furniture Store Cart](/src/assets/screenshots/mobile/cart.png)                                 |
+| ![Furniture Store Empty Cart](/src/assets/screenshots/desktop/empty-cart.png)                     | ![Furniture Store Empty Cart](/src/assets/screenshots/mobile/empty-cart.png)                     |
+| ![Furniture Store Checkout](/src/assets/screenshots/desktop/checkout.png)                         | ![Furniture Store Checkout](/src/assets/screenshots/mobile/checkout.png)                         |
+| ![Furniture Store Checkout Validations](/src/assets/screenshots/desktop/checkout-validations.png) | ![Furniture Store Checkout Validations](/src/assets/screenshots/mobile/checkout-validations.png) |
+| ![Furniture Store Checkout Successful](/src/assets/screenshots/desktop/checkout-successful.png)   | ![Furniture Store Checkout Successful](/src/assets/screenshots/mobile/checkout-successful.png)   |
 
 ### Dependencies:
 
