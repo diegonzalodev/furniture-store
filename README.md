@@ -13,6 +13,13 @@ Furniture Store is a single page application designed to enable customers to bro
 - Add or decrease the number of products based on available stock.
 - Empty or remove items from the cart.
 - Validate the form to confirm the purchase.
+  - **You can use this information to continue with the purchase**
+    | User Credentials |
+    | -------------------------- |
+    | Names: Ignacio Knowles |
+    | Phone: 9887674512 |
+    | Email: igna@gmail.com |
+    | Password: Wtra$$f0rd! |
 - Store card data in LocalStorage.
 - Store form and purchase data in Firebase.
 - Show the ID of the purchase order made by the user.
